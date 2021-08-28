@@ -2,16 +2,17 @@ using System.Collections.Generic;
 
 namespace Trees
 {
-    public class Tree<T>
+    public class BinaryTree<T>
     {
-        public Tree(Node<T> root)
+        public BinaryTree(BinaryNode<T> root)
         {
             Root = root;
+            Nodes = new List<BinaryNode<T>>();
         }
 
-        public Node<T> Root {get;}
+        public BinaryNode<T> Root {get;set;}
 
-        private List<Node<T>> Nodes {get;set;}
+        private List<BinaryNode<T>> Nodes {get;set;}
 
         public void ListNodes()
         {

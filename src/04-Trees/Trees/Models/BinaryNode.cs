@@ -1,11 +1,16 @@
 namespace Trees
 {
-    public class BinaryNode
+    public class BinaryNode<T>
     {
-        public int Value {get;set;}
+        public BinaryNode(T value)
+        {
+            Value = value;
+        }
 
-        public BinaryNode Left {get;set;}
+        public T Value {get;set;}
 
-        public BinaryNode Right {get;set;}
+        public BinaryNode<T> Left {get;set;}
+
+        public BinaryNode<T> Right {get;set;}
     }
 }

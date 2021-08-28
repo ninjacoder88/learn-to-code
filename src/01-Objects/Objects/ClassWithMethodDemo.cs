@@ -11,6 +11,7 @@ namespace Objects
     public class SalesOrder
     {
         public int Id {get;set;}
+        
         public string Customer {get;set;}
 
         public List<LineItem> LineItems {get;set;}
@@ -22,7 +23,12 @@ namespace Objects
 
         public decimal CalculatePrice()
         {
-            
+            decimal total = 0;
+            foreach (var item in LineItems)
+            {
+                total += item.Price;
+            }
+            return tota;
         }
     }
 

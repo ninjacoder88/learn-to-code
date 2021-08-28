@@ -6,8 +6,23 @@ namespace Trees
     {
         static void Main(string[] args)
         {
-            //look at BinaryNode and discuss get; set; properties
-            //lok at Node and discuss constructors
+            BinaryTreeDemo binaryTreeDemo = new BinaryTreeDemo();
+            binaryTreeDemo.Demo01();
+
+            TreeDemo treeDemo = new TreeDemo();
+            treeDemo.Demo01();
+
+            var tree = new TreeMaker().Make();
+
+            BreadthFirstSearch bfs = new BreadthFirstSearch();
+            bfs.Traverse(tree);
+
+            DepthFirstSearch dfs = new DepthFirstSearch();
+            dfs.Traverse(tree);
+
+            RecursiveDepthFirstSearch rdfs = new RecursiveDepthFirstSearch();
+            rdfs.Traverse(tree.Root);
+            rdfs.FindAllFilesWithExt(@"C:\", "*.txt");
         }
     }
 }

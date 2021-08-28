@@ -1,1 +1,3 @@
 # learn-to-code
+
+# Purpose

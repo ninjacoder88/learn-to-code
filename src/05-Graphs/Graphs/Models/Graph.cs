@@ -1,17 +1,45 @@
+using System;
+using System.Collections.Generic;
+
 namespace Graphs
 {
     public class Graph
     {
         public Graph()
         {
-            Verticies = new List<Vertex>();
+            _verticies = new List<Vertex>();
+            _edges = new List<Edge>();
         }
 
-        public List<Vertex> Verticies {get;}
+        public IReadOnlyList<Vertex> Verticies => _verticies;
 
-        public void AddVertex(string name)
+        public IReadOnlyList<Edge> Edges => _edges; 
+
+        public void AddVertex(Vertex vertex)
         {
-            Verticies.Add(new Vertex(name));
+            _verticies.Add(vertex);
         }
+
+        public void AddEdge(Vertex source, Vertex destination)
+        {
+            var edge = new Edge(source, destination);
+            _edges.Add(edge);
+            source.AddEdge(edge);
+        }
+
+        public void DisplayVerticies()
+        {
+            foreach(var vertex in Verticies)
+                Console.WriteLine(vertex.Name);
+        }
+
+        public void DisplayEdges()
+        {
+            foreach(var edge in Edges)
+                Console.WriteLine(edge);
+        }
+
+        private List<Vertex> _verticies;
+        private List<Edge> _edges;
     }
 }

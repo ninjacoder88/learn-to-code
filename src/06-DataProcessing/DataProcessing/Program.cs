@@ -24,6 +24,9 @@ namespace DataProcessing
             //fileDemo.Demo02();
             //fileDemo.Demo03();
             //fileDemo.Demo04();
+
+            FileParser fileParser = new FileParser();
+            //fileParser.ParseFile();
         }
     }
 }

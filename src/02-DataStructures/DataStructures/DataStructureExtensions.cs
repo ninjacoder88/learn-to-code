@@ -27,6 +27,14 @@ namespace DataStructures
             }
         }
 
+        public static void DumpList<T>(this List<T> list)
+        {
+            foreach(var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         public static void Dump<T>(this Collection<T> collection)
         {
             foreach(var item in collection)
@@ -59,6 +67,26 @@ namespace DataStructures
             {
                 Console.WriteLine(current.Value);
                 current = current.Next;
+            }
+        }
+
+        public static void Dump<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
+        {
+            foreach(var entry in dictionary)
+            {
+                Console.Write($"{entry.Key} -> "); 
+                entry.Value.Dump();//doesn't quite work the way i want yet
+            }
+        }
+
+        public static void Dump<TKey, TValue>(this Dictionary<TKey, List<TValue>> dictionary)
+        {
+            foreach(var entry in dictionary)
+            {
+                Console.WriteLine($"{entry.Key} -> ");
+                Console.WriteLine("[");
+                entry.Value.Dump();
+                Console.WriteLine("]");
             }
         }
     }

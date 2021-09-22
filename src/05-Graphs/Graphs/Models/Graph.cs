@@ -36,7 +36,7 @@ namespace Graphs
         public void DisplayEdges()
         {
             foreach(var edge in Edges)
-                Console.WriteLine(edge);
+                Console.WriteLine(edge.ToString());
         }
 
         private List<Vertex> _verticies;

@@ -25,6 +25,11 @@ namespace Graphs
             //Dijkstra's Algorithm
             //Bellman-Ford Algorithm
             //Floyd-Marshall Algorithm
+
+            WeightedGraph weightedGraph = new GraphMaker().MakeWeighted();
+
+            DijkstrasAlgorithm dijkstrasAlgorithm = new DijkstrasAlgorithm();
+            dijkstrasAlgorithm.FindWeighted(weightedGraph, weightedGraph.Verticies.First());
         }
     }
 }

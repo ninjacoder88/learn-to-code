@@ -20,9 +20,9 @@ namespace ParsingFilesIntoGraphs
             _verticies.Add(vertex);
         }
 
-        public void AddEdge(WeightedVertex source, WeightedVertex destination, decimal distance, int time)
+        public void AddEdge(WeightedVertex source, WeightedVertex destination, decimal distance)
         {
-            var edge = new WeightedEdge(source, destination, distance, time);
+            var edge = new WeightedEdge(source, destination, distance);
             _edges.Add(edge);
             source.AddEdge(edge);
         }

@@ -17,7 +17,7 @@ namespace ParsingFilesIntoGraphs
 
         public override string ToString()
         {
-            return $"{Source.Name} => {Destination.Name}";
+            return $"{Source.Name} => {Destination.Name} -> {Distance}";
         }
     }
 }

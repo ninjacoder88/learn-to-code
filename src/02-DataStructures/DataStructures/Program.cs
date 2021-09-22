@@ -33,8 +33,8 @@ namespace DataStructures
 
             DictionaryDemo dictionaryDemo = new DictionaryDemo();
             //dictionaryDemo.Demo01();
-            dictionaryDemo.Demo02();
-            //dictionaryDemo.Demo03();
+            //dictionaryDemo.Demo02();
+            dictionaryDemo.Demo03();
         }
     }
 }

@@ -50,5 +50,12 @@ namespace LessonsInLinq
 
             Console.WriteLine(salesOrders.Single(x => x.Total > 9000m));
         }
+
+        public void Demo05()
+        {
+            var salesOrders = new SalesOrderLoader().LoadSalesOrders();
+
+            var salesOrder = salesOrders.SingleOrDefault(x => x.Total > 9000m);
+        }
     }
 }

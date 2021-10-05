@@ -15,6 +15,8 @@ namespace LessonsInLinq
                 if(i < 5)
                     results.Add(salesOrders[i]);
             }
+
+            results.Dump();
         }
 
         public void Demo02()

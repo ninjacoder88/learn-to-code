@@ -39,5 +39,19 @@ namespace LessonsInLinq
 
             Console.WriteLine(salesOrders.First(x => x.Total > 500m));
         }
+
+        public void Demo05()
+        {
+            var salesOrders = new SalesOrderLoader().LoadSalesOrders();
+            var salesOrder = salesOrders.FirstOrDefault(x => x.Total > 500m);
+            if(salesOrder == null)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine(salesOrder.Total);
+            }
+        }
     }
 }

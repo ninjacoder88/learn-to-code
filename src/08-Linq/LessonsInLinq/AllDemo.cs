@@ -15,8 +15,8 @@ namespace LessonsInLinq
                     "false".Dump();
                     return;
                 }
-                "true".Dump();
             }
+            "true".Dump();
         }
 
         public void Demo02()

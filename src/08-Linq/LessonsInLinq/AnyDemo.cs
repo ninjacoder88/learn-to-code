@@ -10,20 +10,20 @@ namespace LessonsInLinq
 
             foreach(var salesOrder in salesOrders)
             {
-                if(salesOrder.Total <= 500m)
+                if(salesOrder.Total > 500m)
                 {
-                    "false".Dump();
+                    "true".Dump();
                     return;
-                }
-                "true".Dump();
+                } 
             }
+            "false".Dump();
         }
 
         public void Demo02()
         {
             var salesOrders = new SalesOrderLoader().LoadSalesOrders();
 
-            salesOrders.Any(x => x.Total > 500m).Dump();
+            salesOrders.Any(so => so.Total > 500m).Dump();
         }
 
         public void Demo03()

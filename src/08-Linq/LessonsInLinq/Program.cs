@@ -48,9 +48,10 @@ namespace LessonsInLinq
             //orderByDemo.Demo01();
             //orderByDemo.Demo02();
             //orderByDemo.Demo03();
+            //orderByDemo.Demo04();
 
             ChainingDemo chainingDemo = new ChainingDemo();
-            //chainingDemo.Demo01();
+            chainingDemo.Demo01();
             //chainingDemo.Demo02();
         }
     }

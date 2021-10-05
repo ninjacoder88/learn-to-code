@@ -3,8 +3,12 @@
 void Main()
 {
 	var salesOrders = new SalesOrderLoader().LoadMoreSalesOrders();
-
 	
+	//salesOrders.Max(x => x.Total).Dump();
+	
+	salesOrders.OrderBy(x => x.CustomerName).ThenBy(x => x.Total).Dump();
+	
+	salesOrders.GroupBy(x => x.CustomerName).Dump();
 }
 
 public class SalesOrder

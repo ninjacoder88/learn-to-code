@@ -16,6 +16,8 @@ namespace LessonsInLinq
                     continue;
                 results.Add(salesOrders[i]);
             }
+
+            results.Dump();
         }
 
         public void Demo02()

@@ -46,5 +46,12 @@ namespace LessonsInLinq
 
             salesOrders.OrderByDescending(x => x.Total).ToList().Dump();
         }
+
+        public void Demo04()
+        {
+            List<SalesOrder> salesOrders = new SalesOrderLoader().LoadSalesOrders();
+
+            salesOrders.OrderBy(x => x.CustomerName).ThenBy(x => x.Total).ToList().Dump();
+        }
     }
 }

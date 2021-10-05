@@ -9,7 +9,12 @@
 - URL => Uniform Resource Location
 - JSON => JavaScript Object Notation
 
+# What is a url
+- A url is a place that a document or resource lives
+- https://google.com
+- https://www.amazon.com/
 
+# What is an HTTP request
 > GET
 - A type of request that just asks for information
 > POST
@@ -18,11 +23,6 @@
 - A type of request that updates information
 > DELETE
 - A type of request that deletes information
-
-# What is a url
-- A url is a place that a document or resource lives
-- https://google.com
-- https://www.amazon.com/
 
 # What is a query string
 - A query string is the part of the url that comes after the ? and specifies certain options

@@ -14,6 +14,8 @@ namespace WorkingWithApis
                 Console.WriteLine($"\tStatus: {feature.Properties.Status}");
                 Console.WriteLine($"\tEffective: {feature.Properties.Effective}");
                 Console.WriteLine($"\tExpires: {feature.Properties.Expires}");
+                Console.WriteLine($"\tSeverity: {feature.Properties.Severity}");
+                Console.WriteLine($"\tCertainly: {feature.Properties.Certainty}");
                 Console.WriteLine($"\tDescription: {feature.Properties.Description}");
                 Console.WriteLine();
             }

@@ -8,21 +8,29 @@ namespace WorkingWithApis
         public void Demo01()
         {
             Console.WriteLine("Start");
-            CountToX(5);
+            CountToX(10);
             Console.WriteLine("Finish");
         }
 
         public async Task Demo02Async()
         {
             Console.WriteLine("Start");
-            await CountToX(5);
+            await CountToX(1000);
+            Console.WriteLine("Finish");
+        }
+
+        public async Task Demo03()
+        {
+            Console.WriteLine("Start");
+            await CountToX(10);
+            await CountToX(10);
             Console.WriteLine("Finish");
         }
 
         private Task CountToX(int x)
         {
             return Task.Factory.StartNew(() => {
-                 for(int i = 0; i < x; i++)
+                for(int i = 0; i < x; i++)
                 {
                     Console.WriteLine(i);
                 }

@@ -20,5 +20,7 @@ namespace WorkingWithApis
         public string Expires {get;set;}
         public string Status {get;set;}
         public string Description {get;set;}
+        public string Severity {get;set;}
+        public string Certainty {get;set;}
     }
 }

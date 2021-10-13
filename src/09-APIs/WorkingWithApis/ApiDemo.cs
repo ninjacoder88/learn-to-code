@@ -28,16 +28,17 @@ namespace WorkingWithApis
             string responseContent = null;
             using(var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://api.weather.gov/alerts/active/area/LA");
+                client.BaseAddress = new Uri("https://api.weather.gov/");
                 client.DefaultRequestHeaders.Add("User-Agent", "idt-sdf");
 
-                var response = await client.GetAsync("");
+                var response = await client.GetAsync("alerts/active/area/LA");
                 responseContent = await response.Content.ReadAsStringAsync();
 
                 if(!response.IsSuccessStatusCode)
                     throw new Exception(responseContent);
             }
 
+            //Console.WriteLine(responseContent);
             var weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(responseContent);
             weatherResponse.Dump();
         }

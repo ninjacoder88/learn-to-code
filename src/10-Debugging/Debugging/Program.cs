@@ -11,7 +11,12 @@ namespace Debugging
 	
             var salesOrders = salesOrderCreator.Create();
             
-            Console.WriteLine(salesOrders.Sum(x => x.Total));
+            int totalSales = 0;
+            foreach (var salesOrder in salesOrders)
+            {
+                totalSales += salesOrder.Total;
+            }
+            Console.WriteLine(totalSales);
         }
     }
 }

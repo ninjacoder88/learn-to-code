@@ -6,7 +6,12 @@ void Main()
 	
 	var salesOrders = salesOrderCreator.Create();
 	
-	salesOrders.Sum(x => x.Total).Dump();
+	int totalSales = 0;
+	foreach (var salesOrder in salesOrders)
+	{
+		totalSales += salesOrder.Total;
+	}
+	totalSales.Dump();
 }
 
 public class SalesOrderCreator
@@ -20,7 +25,7 @@ public class SalesOrderCreator
 		List<SalesOrder> salesOrders = new List<SalesOrder>();
 		for(int i = 0; i < salesOrderCount; i++)
 		{
-			var salesOrder = new SalesOrder { Id = i + 1}
+			var salesOrder = new SalesOrder { Id = i + 1};
 			salesOrders.Add(salesOrder);
 			
 			int lineItemCount = r.Next(1,10);
@@ -49,7 +54,8 @@ public class SalesOrder
 	
 	public void AddLineItem(LineItem lineItem)
 	{
-		Total = lineItem.Price * lineItem.Quantity;
+		LineItems.Add(lineItem);
+		Total += lineItem.Price * lineItem.Quantity;
 	}
 }
 
